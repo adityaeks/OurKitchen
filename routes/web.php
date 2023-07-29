@@ -17,6 +17,9 @@ use App\Http\Controllers\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/products', function () {
+    return view('products.index');
+});
 // halaman login
 Route::get('/',[LoginController::class, 'index']);
 Route::post('/',[LoginController::class, 'authenticate']);
