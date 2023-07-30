@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -38,6 +39,9 @@ Route::get('home', [HomeController::class, 'index'])->name('home');
 
 //profile controller
 Route::get('profile', ProfileController::class)->name('profile');
+
+//cart controller
+Route::resource('cart', CartController::class);
 
 //employee controller
 Route::resource('employees', EmployeeController::class);
