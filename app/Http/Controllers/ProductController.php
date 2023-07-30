@@ -48,7 +48,49 @@ class ProductController extends Controller
 
     return redirect()->route('products.index')->with('success', 'Produk telah ditambahkan');
 }
+public function edit($id)
+{
+    $product = Product::find($id);
+    $pageTitle = 'Edit Produk: ' . $product->name;
 
+    return view('products.edit', compact('pageTitle', 'product'));
+}
+
+    /**
+     * Memperbarui produk yang ada di dalam database.
+     */
+    public function update(Request $request, $id)
+{
+    $product = Product::find($id);
+
+    $request->validate([
+        'name' => 'required',
+        'price' => 'required|numeric',
+        'size' => 'required|numeric',
+    ]);
+
+    $product->name = $request->name;
+    $product->price = $request->price;
+    $product->size = $request->size;
+
+    // Cek apakah ada file gambar baru diunggah
+    if ($request->hasFile('image')) {
+        // Hapus foto lama dari storage jika ada
+        if (!empty($product->image)) {
+            Storage::delete('images/' . $product->image);
+        }
+
+        // Unggah foto baru dan simpan nama file ke dalam database
+        $file = $request->file('image');
+        $file_name = time() . '.' . $file->getClientOriginalExtension();
+        $file->storeAs('images', $file_name);
+        $product->image = $file_name;
+    }
+
+    $product->save();
+
+    return redirect()->route('products.index')->with('success', 'Produk telah diperbarui');
+}
 public function destroy($id)
     {
         $product = Product::find($id);
