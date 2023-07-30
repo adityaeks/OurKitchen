@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
@@ -12,10 +13,10 @@ class Product extends Model
     protected $fillable = ['name', 'price', 'size', '', 'image'];
 
 
-    public function storeImage(UploadedFile $file)
-    {
-        $filename = time() . '.' . $file->getClientOriginalExtension();
-        $file->storeAs('public/images', $filename);
-        return $filename;
-    }
+    public function storeImage($file)
+{
+    $file_name = time() . '.' . $file->getClientOriginalExtension();
+    $file->storeAs('images', $file_name, 'public');
+    return $file_name;
+}
 }
