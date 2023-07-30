@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -17,9 +18,7 @@ use App\Http\Controllers\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/products', function () {
-    return view('products.index');
-});
+
 // halaman login
 Route::get('/',[LoginController::class, 'index']);
 Route::post('/',[LoginController::class, 'authenticate']);
@@ -52,3 +51,8 @@ Route::get('/detail', function () {return view('employee.detail');});
 Route::get('/bantuan', function () {return view('bantuan');});
 
 Route::get('/admin', function () {return view('admin');});
+
+
+
+Route::get('products/listmadu', [ProductController::class, 'listmadu'])->name('products.listmadu');
+Route::resource('products', ProductController::class);

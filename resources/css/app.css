@@ -1,0 +1,197 @@
+.image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.square-card {
+    width: 200px;
+    width: 200px;
+}
+
+.square-img {
+    width: 100%;
+    height: 150px; /* Sesuaikan tinggi yang diinginkan */
+    object-fit: cover;
+}
+
+* {
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    align-items: center;
+}
+.section-padding {
+    padding: 100px 0;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    letter-spacing: 25px;
+}
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.navbar-nav a {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: #0000;
+}
+
+.star {
+    color: gold;
+    font-size: 24px;
+}
+
+.centered-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.small-image {
+    width: 200px; /* Adjust the width as needed */
+    justify-content: center;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+/* background */
+
+footer.row {
+    background-color: black;
+}
+
+/* Teks pada footer */
+.text-body-secondary {
+    color: white;
+}
+
+/* Bagian kedua dari footer */
+footer.py-3 {
+    background-color: black;
+}
+
+/* Teks pada bagian kedua dari footer */
+.text-body-secondary {
+    color: white;
+}
+
+/* .image-caption {
+  margin-top: 50px;
+} */
+/* backgorund login */
