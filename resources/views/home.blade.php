@@ -18,7 +18,6 @@
     <body>
 
         <!--navbar  -->
-
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><span class="text-warning">Honey Fey</span></a>
@@ -26,9 +25,9 @@
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">List Madu</a>
-                        </li>                        
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('employees.create') }}">Pemesanan</a>
+                            <a class="nav-link" aria-current="page" href="">Pemesanan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./detail">Tentang Kami</a>
@@ -63,15 +62,15 @@
                     <div
                         class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center text-center">
                         <h5>Honey Fey</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Maecenas ut nisl mi. Aliquam ex urna, commodo vitae lorem eget, 
-                            consectetur laoreet metus. Proin magna urna, dignissim quis scelerisque malesuada, 
-                            vehicula in sapien. Suspendisse eu dictum leo. Cras at iaculis neque, non varius neque. 
-                            Mauris vitae nibh ex. Ut sed lacinia tellus. Cras eget urna libero. 
-                            Fusce scelerisque leo eu velit consectetur ornare eget ac urna. 
-                            Nunc tempor porta lacus, et interdum est auctor in. 
-                            Nunc venenatis a neque nec tristique. Etiam sit amet sollicitudin ex. 
-                            Fusce eget imperdiet nunc, in vulputate odio. 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Maecenas ut nisl mi. Aliquam ex urna, commodo vitae lorem eget,
+                            consectetur laoreet metus. Proin magna urna, dignissim quis scelerisque malesuada,
+                            vehicula in sapien. Suspendisse eu dictum leo. Cras at iaculis neque, non varius neque.
+                            Mauris vitae nibh ex. Ut sed lacinia tellus. Cras eget urna libero.
+                            Fusce scelerisque leo eu velit consectetur ornare eget ac urna.
+                            Nunc tempor porta lacus, et interdum est auctor in.
+                            Nunc venenatis a neque nec tristique. Etiam sit amet sollicitudin ex.
+                            Fusce eget imperdiet nunc, in vulputate odio.
                             Morbi malesuada molestie lorem semper accumsan.</p>
                         <a href="./detail" class="btn btn-warning mt-3">Selengkapanya</a>
                     </div>
@@ -81,15 +80,15 @@
                     <div
                         class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center text-center">
                         <h5>Honey Fey</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Maecenas ut nisl mi. Aliquam ex urna, commodo vitae lorem eget, 
-                            consectetur laoreet metus. Proin magna urna, dignissim quis scelerisque malesuada, 
-                            vehicula in sapien. Suspendisse eu dictum leo. Cras at iaculis neque, non varius neque. 
-                            Mauris vitae nibh ex. Ut sed lacinia tellus. Cras eget urna libero. 
-                            Fusce scelerisque leo eu velit consectetur ornare eget ac urna. 
-                            Nunc tempor porta lacus, et interdum est auctor in. 
-                            Nunc venenatis a neque nec tristique. Etiam sit amet sollicitudin ex. 
-                            Fusce eget imperdiet nunc, in vulputate odio. 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Maecenas ut nisl mi. Aliquam ex urna, commodo vitae lorem eget,
+                            consectetur laoreet metus. Proin magna urna, dignissim quis scelerisque malesuada,
+                            vehicula in sapien. Suspendisse eu dictum leo. Cras at iaculis neque, non varius neque.
+                            Mauris vitae nibh ex. Ut sed lacinia tellus. Cras eget urna libero.
+                            Fusce scelerisque leo eu velit consectetur ornare eget ac urna.
+                            Nunc tempor porta lacus, et interdum est auctor in.
+                            Nunc venenatis a neque nec tristique. Etiam sit amet sollicitudin ex.
+                            Fusce eget imperdiet nunc, in vulputate odio.
                             Morbi malesuada molestie lorem semper accumsan.</p>
                         <a href="./detail" class="btn btn-warning mt-3">Check More</a>
                     </div>
@@ -125,9 +124,9 @@
                             <div class="about-text">
                                 <h2>Kami Menyediakan Madu Berkualitas Tinggi <br> Untuk Anda </h2>
                                 <p>
-                                Honey Fey adalah destinasi online terbaik bagi para pencinta madu yang mencari 
-                                kualitas terbaik dan rasa yang otentik. Website ini didedikasikan untuk memperkenalkan 
-                                keajaiban madu alami dan menghadirkan berbagai pilihan madu berkualitas tinggi dari seluruh penjuru dunia. 
+                                Honey Fey adalah destinasi online terbaik bagi para pencinta madu yang mencari
+                                kualitas terbaik dan rasa yang otentik. Website ini didedikasikan untuk memperkenalkan
+                                keajaiban madu alami dan menghadirkan berbagai pilihan madu berkualitas tinggi dari seluruh penjuru dunia.
                                 Nikmati kekayaan manfaat alami dari setiap tetes madu yang kami tawarkan.</p>
                                 <a href="#" class="btn btn-warning">Pesan Sekarang</a>
                             </div>
@@ -187,7 +186,7 @@
                     <h5 class="text-white">Contact Us</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item "><a href="./bantuan" class="nav-link p-0 text-white-50">butuh bantuan? hubungi kami</a>
-                    </li> 
+                    </li>
                     </ul>
                 </div>
 

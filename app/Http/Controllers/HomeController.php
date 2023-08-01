@@ -12,4 +12,10 @@ class HomeController extends Controller
 
         return view('home', ['pageTitle' => $pageTitle]);
     }
+
+    function welcome(){
+        $pageTitle = 'Home';
+
+        return view('home', ['pageTitle' => $pageTitle]);
+    }
 }

@@ -12,5 +12,11 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+    }
+    public function index()
+    {
+        $pageTitle = 'admin';
+        return view('admin.admin', compact('pageTitle'));
     }
 }

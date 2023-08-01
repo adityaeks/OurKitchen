@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
-        <title>Administrator</title>
+        <title>Detail</title>
         <link rel="stylesheet" href="{{ asset('style.css') }}">
         @vite('resources/sass/app.scss')
     </head>
@@ -21,14 +21,20 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><span class="text-warning">Honey Fey</span></a>
+                <a class="navbar-brand"><span class="text-warning">Honey Fey</span></a>
                 <div class="navbar-nav flex-grow-1 ms-auto">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">List Madu</a>
-                        </li>                        
+                            <a class="nav-link" aria-current="page" href="">Home</a>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('employees.index') }}">Riwayat</a>
+                            <a class="nav-link" aria-current="page" href="#">List Madu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="">Pemesanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./bantuan">Bantuan</a>
                         </li>
                     </ul>
                     @auth
@@ -54,24 +60,27 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{ Vite::asset('resources/images/bgmadu1.jpg') }}" class="d-block w-100" alt="..." />
+                    <div
+                        class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center text-center">
+                        <h5>Honey Fey</h5>
+                        <p>Honey Fey adalah destinasi online terbaik bagi para pencinta madu yang mencari
+                                kualitas terbaik dan rasa yang otentik. Website ini didedikasikan untuk memperkenalkan
+                                keajaiban madu alami dan menghadirkan berbagai pilihan madu berkualitas tinggi dari seluruh penjuru dunia.
+                                Nikmati kekayaan manfaat alami dari setiap tetes madu yang kami tawarkan.
+                                <br>
+                                <br>
+                                Honey Fey adalah perusahaan madu yang beralamat di Surabaya tepatnya di Ketintang PTT. 4 No 5 RT59 RW11 Gang. 2, Wonokromo, Surabaya 55163, Indonesia
+                            </p>
+                    </div>
                 </div>
             </div>
-
-            <!-- end carousel -->
-
-
-
-
-
             {{-- footer  --}}
-
-
             <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top  d-flex justify-content-center">
                 <div class="col-6 mt-5 mb-5">
                     <h5 class="text-white">Contact Us</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item "><a href="#" class="nav-link p-0 text-white-50">butuh bantuan? hubungi kami</a>
-                    </li> 
+                    </li>
                     </ul>
                 </div>
 
@@ -83,9 +92,9 @@
                 </div>
 
                 <div class="col-6 mt-5 mb-5">
-                    <h5 class="text-white">Home</h5>
+                    <h5 class="text-white">Administrator</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item "><a href="home" class="nav-link p-0 text-white-50">Menu Utama</a></li>
+                        <li class="nav-item "><a href="/" class="nav-link p-0 text-white-50">Log In</a></li>
                     </ul>
                 </div>
             </footer>

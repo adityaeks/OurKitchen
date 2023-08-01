@@ -24,7 +24,7 @@ class CartController extends Controller
             return $cartItem->product_amount * $cartItem->product_price;
         });
 
-        return view('products.keranjang', compact('cartItems', 'totalPrice', 'pageTitle'));
+        return view('user.cart', compact('cartItems', 'totalPrice', 'pageTitle'));
     }
 
     /**
@@ -66,7 +66,7 @@ class CartController extends Controller
         }
 
 
-        return redirect()->route('products.listmadu');
+        return redirect()->route('listmadu');
     }
 
     /**
@@ -97,6 +97,11 @@ class CartController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
+    {
+        //
+    }
+
+    public function checkout()
     {
         //
     }

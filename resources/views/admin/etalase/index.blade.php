@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-3 col-xl-2">
                 <div class="d-grid gap-2">
-                    <a href="{{ route('products.create') }}" class="btn btn-primary">Create Product</a>
+                    <a href="{{ route('etalase.create') }}" class="btn btn-primary">Create Product</a>
                 </div>
             </div>
         </div>
@@ -38,10 +38,10 @@
                                     <div class="d-flex">
                                         {{-- <a href="#" class="btn btn-outline-dark btn-sm me-2"><i
                                             class="bi-person-lines-fill"></i></a> --}}
-                                        <a href="{{ route('products.edit', $product->id) }}"
+                                        <a href="{{ route('etalase.edit', $product->id) }}"
                                             class="btn btn-outline-dark btn-sm me-2"><i class="bi-pencil-square"></i></a>
                                         <div>
-                                            <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                                            <form action="{{ route('etalase.destroy', $product->id) }}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-outline-dark btn-sm me-2" data-name="{{ $product->name.' '.$product->price }}"><i

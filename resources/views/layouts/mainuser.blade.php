@@ -31,7 +31,7 @@
                         <a class="nav-link" aria-current="page" href="#">List Madu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('employees.create') }}">Pemesanan</a>
+                        <a class="nav-link" aria-current="page" href="">Pemesanan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./bantuan">Bantuan</a>
