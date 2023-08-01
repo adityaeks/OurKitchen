@@ -1,3 +1,7 @@
+@php
+    $currenturl = Request::url();
+    $auth_check = auth()->check();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,12 +87,19 @@
         </div>
 
         <div class="col-6 mt-5 mb-5">
-            <h5 class="text-white">Administrator</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item "><a href="{{ route('products.index') }}" class="nav-link p-0 text-white-50">Log
-                        In</a></li>
-            </ul>
+            @if ($currenturl == route('home') && $auth_check)
+                <h5 class="text-white">Administrator</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link p-0 text-white-50">Login</a></li>
+                </ul>
+            @else
+                <h5 class="text-white">Home</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link p-0 text-white-50">Menu Utama</a></li>
+                </ul>
+            @endif
         </div>
+
     </footer>
 
 
