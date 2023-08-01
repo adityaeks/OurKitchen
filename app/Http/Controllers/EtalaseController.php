@@ -4,27 +4,38 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class EtalaseController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
+        //
         $pageTitle = 'Daftar Produk';
         $products = Product::all();
 
-        return view('products.index', compact('pageTitle', 'products'));
+        return view('admin.etalase.index', compact('pageTitle', 'products'));
     }
+
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
+        //
         $pageTitle = 'Tambah Produk Baru';
 
-        return view('products.create', compact('pageTitle'));
+        return view('admin.etalase.create', compact('pageTitle'));
     }
 
-
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
+        //
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:3148',
             'name' => 'required',
@@ -46,21 +57,35 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('products.index')->with('success', 'Produk telah ditambahkan');
-    }
-    public function edit($id)
-    {
-        $product = Product::find($id);
-        $pageTitle = 'Edit Produk: ' . $product->name;
-
-        return view('products.edit', compact('pageTitle', 'product'));
+        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah ditambahkan');
     }
 
     /**
-     * Memperbarui produk yang ada di dalam database.
+     * Display the specified resource.
      */
-    public function update(Request $request, $id)
+    public function show(string $id)
     {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+        $product = Product::find($id);
+        $pageTitle = 'Edit Produk: ' . $product->name;
+
+        return view('admin.etalase.edit', compact('pageTitle', 'product'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
         $product = Product::find($id);
 
         $request->validate([
@@ -89,10 +114,15 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('products.index')->with('success', 'Produk telah diperbarui');
+        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah diperbarui');
     }
-    public function destroy($id)
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
     {
+        //
         $product = Product::find($id);
         // Hapus foto dari storage jika ada
         if (!empty($product->image)) {
@@ -102,16 +132,6 @@ class ProductController extends Controller
         // Hapus data produk dari database
         $product->delete();
 
-        return redirect()->route('products.index')->with('success', 'Produk telah dihapus');
-    }
-
-
-
-    public function listmadu()
-    {
-        $pageTitle = 'Daftar madu';
-        $products = Product::all();
-
-        return view('products.listmadu', compact('pageTitle', 'products'));
+        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah dihapus');
     }
 }

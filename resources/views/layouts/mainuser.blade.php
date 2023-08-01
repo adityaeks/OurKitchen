@@ -36,7 +36,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('products.listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./detail">Tentang Kami</a>
+                        <a class="nav-link" aria-current="page" href="">Pemesanan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./bantuan">Bantuan</a>
