@@ -45,39 +45,3 @@ Route::get('checkout', [CartController::class, 'checkout'])->name('checkout'); /
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 Route::resource('etalase', EtalaseController::class);
 Route::get('riwayatpemesanan', [RiwayatPemesananController::class, 'index'])->name('riwayatpemesanan');
-
-// //halaman logout
-
-
-// // Route::get('login',[LoginController::class, 'index']);;
-// // Route::post('login',[LoginController::class, 'authenticate']);;
-
-// // register
-
-
-// //route home
-// Route::get('home', [HomeController::class, 'index'])->name('home');
-
-// //profile controller
-// Route::get('profile', ProfileController::class)->name('profile');
-
-// //cart controller
-// Route::resource('cart', CartController::class);
-
-// //employee controller
-// Route::resource('employees', EmployeeController::class);
-
-// Route::get('/create', function () {return view('employee.create');})->middleware(['checkRole:pembeli']);
-
-// Route::get('/admin', function () {return view('admin');})->middleware(['checkRole:admin']);
-
-// Route::get('/detail', function () {return view('employee.detail');});
-
-// Route::get('/bantuan', function () {return view('bantuan');});
-
-// // Route::get('/admin', function () {return view('admin');});
-
-
-
-// Route::get('products/listmadu', [ProductController::class, 'listmadu'])->name('products.listmadu');
-// Route::resource('products', ProductController::class);

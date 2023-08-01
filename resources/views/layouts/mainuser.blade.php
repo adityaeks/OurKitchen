@@ -1,3 +1,7 @@
+@php
+    $currenturl = Request::url();
+    $auth_check = auth()->check();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +15,7 @@
 
 
     <title>{{ $pageTitle }}</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     @vite('resources/sass/app.scss')
     @vite('resources/css/app.css')
 </head>
@@ -21,14 +26,14 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand"><span class="text-warning">Honey Fey</span></a>
+            <a class="navbar-brand" href="/"><span class="text-warning">Honey Fey</span></a>
             <div class="navbar-nav flex-grow-1 ms-auto">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">List Madu</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('products.listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="">Pemesanan</a>
@@ -46,6 +51,17 @@
                         </form>
                     </li>
                 @endauth
+
+                @guest
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link" href="/">Login</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                </ul>
+                @endguest
             </div>
         </div>
     </nav>
@@ -71,11 +87,19 @@
         </div>
 
         <div class="col-6 mt-5 mb-5">
-            <h5 class="text-white">Administrator</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item "><a href="/" class="nav-link p-0 text-white-50">Log In</a></li>
-            </ul>
+            @if ($currenturl == route('home') && $auth_check)
+                <h5 class="text-white">Administrator</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link p-0 text-white-50">Login</a></li>
+                </ul>
+            @else
+                <h5 class="text-white">Home</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link p-0 text-white-50">Menu Utama</a></li>
+                </ul>
+            @endif
         </div>
+
     </footer>
 
 
