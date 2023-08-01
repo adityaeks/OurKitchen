@@ -23,7 +23,10 @@
             <div class="navbar-nav flex-grow-1 ms-auto">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Etalase</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ route('products.index') }}">Etalase</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Riwayat Pemesanan</a>

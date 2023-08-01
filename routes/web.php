@@ -50,7 +50,7 @@ Route::get('/create', function () {return view('employee.create');})->middleware
 
 Route::get('/admin', function () {return view('admin');})->middleware(['checkRole:admin']);
 
-Route::get('/detail', function () {return view('employee.detail');});
+Route::get('/detail', function () {return view('detail');});
 
 Route::get('/bantuan', function () {return view('bantuan');});
 
