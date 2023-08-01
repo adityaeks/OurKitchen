@@ -33,7 +33,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('products.listmadu') }}">List Madu</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="">Pemesanan</a>
@@ -43,24 +43,35 @@
                     </li>
                 </ul>
                 @auth
-                    <li class="nav-item ms-auto">
-                        <form action="/logout" method="post">
-                            @csrf
-                            <button type="submit" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>
-                                <span style="margin-left: 2px;">Log out</button>
-                        </form>
+                    <li class="nav-item dropdown ms-auto">
+                        <a href="">
+                            <i class="bi bi-cart-fill"></i> </a>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button type="submit" class="dropdown-item">
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    <span style="margin-left: 2px;">Log out</span>
+                                </button>
+                            </form>
+                        </div>
                     </li>
+
                 @endauth
 
                 @guest
-                <ul class="navbar-nav ms-auto">
-                    <li>
-                        <a class="nav-link" href="/">Login</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/register">Register</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li>
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                    </ul>
                 @endguest
             </div>
         </div>
@@ -90,12 +101,14 @@
             @if ($currenturl == route('home') && $auth_check)
                 <h5 class="text-white">Administrator</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link p-0 text-white-50">Login</a></li>
+                    <li class="nav-item"><a href="{{ route('etalase.index') }}"
+                            class="nav-link p-0 text-white-50">Login</a></li>
                 </ul>
             @else
                 <h5 class="text-white">Home</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link p-0 text-white-50">Menu Utama</a></li>
+                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link p-0 text-white-50">Menu Utama</a>
+                    </li>
                 </ul>
             @endif
         </div>
