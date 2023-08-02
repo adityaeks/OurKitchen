@@ -44,23 +44,25 @@
                 </ul>
                 @auth
 
-                    <li class="nav-item dropdown ms-auto">
-                        <a href="/cart">
-                            <i class="bi bi-cart-fill"></i> </a>
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                <li class="nav-item dropdown ms-auto">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="/cart" class="dropdown-item">
+                            <i class="bi bi-cart-fill"></i>
+                            <span style="margin-left: 2px;">Cart</span>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <form action="/logout" method="post">
-                                @csrf
-                                <button type="submit" class="dropdown-item">
-                                    <i class="bi bi-box-arrow-in-right"></i>
-                                    <span style="margin-left: 2px;">Log out</span>
-                                </button>
-                            </form>
-                        </div>
-                    </li>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button type="submit" class="dropdown-item">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <span style="margin-left: 2px;">Log out</span>
+                            </button>
+                        </form>
+                    </div>
+                </li>
 
                 @endauth
                 @guest
@@ -78,7 +80,7 @@
     </nav>
     <!-- end navbar -->
     @yield('content')
-    
+
     {{-- footer  --}}
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top  d-flex justify-content-center">
         <div class="col-6 mt-5 mb-5">

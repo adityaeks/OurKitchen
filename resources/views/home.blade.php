@@ -1,5 +1,13 @@
 @extends('layouts.mainuser')
 @section('content')
+
+@if(session('message'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ session('message') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
 <!-- carousel -->
 <div id="carouselExampleCaptions" class="carousel slide">
     {{-- <div class="carousel-indicators">
@@ -129,3 +137,4 @@
     </div>
     <!-- 4 foto makanan -->
 @endsection
+

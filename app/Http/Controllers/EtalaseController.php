@@ -14,6 +14,9 @@ class EtalaseController extends Controller
     public function index()
     {
         //
+        if(auth()->user()->email !== 'admin@gmail.com'){
+            return redirect()->route('home')->with('message', 'Anda bukan admin');
+        }
         $pageTitle = 'Daftar Produk';
         $products = Product::all();
 
