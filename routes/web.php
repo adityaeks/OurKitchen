@@ -12,6 +12,7 @@ use App\Http\Controllers\ListMaduController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RiwayatPemesananController;
+use App\Http\Controllers\StaticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +27,8 @@ use App\Http\Controllers\RiwayatPemesananController;
 // ROMBAK
 Route::get('', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('listmadu', [ListMaduController::class, 'index'])->name('listmadu');
-Route::view('tentangkami', 'aboutus')->name('tentangkami');
-Route::view('bantuan', 'bantuan')->name('bantuan');
+Route::get('tentangkami', [StaticController::class, 'aboutus'])->name('tentangkami');
+Route::get('bantuan', [StaticController::class, 'bantuan'])->name('bantuan');
 
 // //Login & Register
 Route::get('login', [LoginController::class, 'index']);
@@ -39,7 +40,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 // //logged user
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::resource('cart', CartController::class);
-Route::get('checkout', [CartController::class, 'checkout'])->name('checkout'); //belum ada view
+Route::get('cart/checkout/{name}', [CartController::class, 'checkout'])->name('checkout');
 
 // //logged admin
 Route::get('admin', [AdminController::class, 'index'])->name('admin');

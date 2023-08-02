@@ -26,7 +26,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('products.index') }}">Etalase</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('etalase.index') }}">Etalase</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Riwayat Pemesanan</a>

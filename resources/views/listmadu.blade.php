@@ -11,6 +11,7 @@
                                 <h5 class="card-title">{{ $product->name }}</h5>
                                 <p class="card-text">Harga: Rp {{ number_format($product->price, 0, ',', '.') }}</p>
                                 <p class="card-text">Ukuran: {{ $product->size }} ml</p>
+                                @auth
                                 <form action="{{ route('cart.store') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="product_id" value="{{ $product->id }}">
@@ -19,7 +20,7 @@
                                     <input type="hidden" name="customer_name" value="{{ Auth::user()->name }}">
                                     <button type="submit">Add to Cart</button>
                                 </form>
-
+                                @endauth
                             </div>
                         </div>
                     </div>

@@ -36,15 +36,16 @@
                         <a class="nav-link" aria-current="page" href="{{ route('listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Pemesanan</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('tentangkami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./bantuan">Bantuan</a>
+                        <a class="nav-link" href="{{ route('bantuan') }}">Bantuan</a>
                     </li>
                 </ul>
                 @auth
+
                     <li class="nav-item dropdown ms-auto">
-                        <a href="">
+                        <a href="/cart">
                             <i class="bi bi-cart-fill"></i> </a>
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -62,7 +63,6 @@
                     </li>
 
                 @endauth
-
                 @guest
                     <ul class="navbar-nav ms-auto">
                         <li>
@@ -78,6 +78,7 @@
     </nav>
     <!-- end navbar -->
     @yield('content')
+    
     {{-- footer  --}}
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top  d-flex justify-content-center">
         <div class="col-6 mt-5 mb-5">
