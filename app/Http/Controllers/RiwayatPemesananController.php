@@ -10,6 +10,6 @@ class RiwayatPemesananController extends Controller
     public function index()
     {
         //
-        return view('admin.riwayatpemesanan')
+        return view('admin.riwayatpemesanan');
     }
 }
