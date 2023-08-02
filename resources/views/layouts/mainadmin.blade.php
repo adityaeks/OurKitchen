@@ -29,7 +29,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('etalase.index') }}">Etalase</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Riwayat Pemesanan</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('riwayatpemesanan') }}">Riwayat Pemesanan</a>
                     </li>
                 </ul>
                 @auth

@@ -43,6 +43,6 @@ Route::resource('cart', CartController::class);
 Route::get('cart/checkout/{name}', [CartController::class, 'checkout'])->name('checkout');
 
 // //logged admin
+Route::get('riwayatpemesanan', [RiwayatPemesananController::class, 'index'])->name('riwayatpemesanan');
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 Route::resource('etalase', EtalaseController::class);
-Route::get('riwayatpemesanan', [RiwayatPemesananController::class, 'index'])->name('riwayatpemesanan');
