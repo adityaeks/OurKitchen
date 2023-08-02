@@ -1,7 +1,7 @@
 @extends('layouts.mainadmin')
 @section('content')
     <div class="container-sm mt-5">
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('etalase.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row justify-content-center">
                 <div class="p-5 bg-light rounded-3 border col-xl-6">
@@ -46,7 +46,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-md-6 d-grid">
-                            <a href="{{ route('products.index') }}" class="btn btn-outline-dark btn-lg mt-3"><i
+                            <a href="{{ route('etalase.index') }}" class="btn btn-outline-dark btn-lg mt-3"><i
                                     class="bi-arrow-left-circle me-2"></i> Cancel</a>
                         </div>
                         <div class="col-md-6 d-grid">

@@ -17,7 +17,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        
+
 
         $pageTitle = 'Employee List';
 
@@ -42,6 +42,7 @@ class EmployeeController extends Controller
 
         return view('employee.create', compact('pageTitle'));
     }
+
 
     /**
      * Store a newly created resource in storage.

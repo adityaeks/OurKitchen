@@ -20,7 +20,7 @@
                 <div class="navbar-nav flex-grow-1 ms-auto">
                     @auth
                         <li class="nav-item ms-auto">
-                            <form action="/logout" method="post">
+                            <form action="logout" method="post">
                                 @csrf
                                 <button type="submit" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>
                                     <span style="margin-left: 2px;">Log out</button>
@@ -48,7 +48,7 @@
 
 
               <main class="form-signin w-100 m-auto">
-                <form action="/" method="POST">
+                <form action="login" method="POST">
                     @csrf
                     <h1 class="h3 mb-3 fw-normal text-center text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3">Masuk</h1>
                     <div class="form-floating">
