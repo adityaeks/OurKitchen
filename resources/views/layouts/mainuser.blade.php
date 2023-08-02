@@ -36,10 +36,11 @@
                         <a class="nav-link" aria-current="page" href="{{ route('listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./detail">Detail</a>
+
+                        <a class="nav-link" aria-current="page" href="{{ route('tentangkami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./aboutus">about us</a>
+                        <a class="nav-link" href="{{ route('bantuan') }}">Bantuan</a>
                     </li>
                 </ul>
                 @auth
@@ -78,6 +79,7 @@
     </nav>
     <!-- end navbar -->
     @yield('content')
+    
     {{-- footer  --}}
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5  border-top  d-flex justify-content-center">
         <div class="col-6 mt-5 mb-5">

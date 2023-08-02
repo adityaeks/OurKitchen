@@ -5,6 +5,12 @@
 // @import 'variables';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 //bootstrap icon
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
