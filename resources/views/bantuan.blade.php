@@ -1,5 +1,6 @@
 @extends('layouts.mainuser')
 @section('content')
+
     <section id="about" class="about-section-padding pt-4">
         <div class="container" bg="bgmadu4.jpg">
             <div class="row">

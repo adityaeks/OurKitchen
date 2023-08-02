@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
-    <title>{{ $pageTitle }}</title>
+    <title>Our Kitchen</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     @vite('resources/sass/app.scss')
     @vite('resources/css/app.css')
@@ -36,6 +36,7 @@
                         <a class="nav-link" aria-current="page" href="{{ route('listmadu') }}">List Madu</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link" aria-current="page" href="{{ route('tentangkami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
