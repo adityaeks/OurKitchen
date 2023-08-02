@@ -96,10 +96,16 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $cartItem = Cart::findOrFail($id);
+        // You can add some validation here to ensure that the current user owns this cart item before deleting.
+
+        $cartItem->delete();
+
+        return redirect()->route('cart.index')->with('success', 'Item removed from cart successfully.');
     }
+
 
     public function checkout()
     {
