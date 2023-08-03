@@ -41,7 +41,7 @@
                             <input type="file" class="form-control" id="image" name="image" onchange="previewImage(event)">
                             <!-- Conditionally show the preview based on whether a new image is selected -->
                             @if(!empty($product->image))
-                                <img id="preview" src="{{ asset('images/' . $product->image) }}" alt="Preview" style="max-width: 200px; margin-top: 10px;">
+                                <img id="preview" src="{{ asset('storage/images/' . $product->image) }}" alt="Preview" style="max-width: 200px; margin-top: 10px;">
                             @else
                                 <img id="preview" src="" alt="Preview" style="display: none; max-width: 200px; margin-top: 10px;">
                             @endif

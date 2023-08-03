@@ -61,7 +61,7 @@ class EtalaseController extends Controller
 
         $product->save();
 
-        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah ditambahkan');
+        return redirect()->route('etalase.index')->with('success', 'Produk telah ditambahkan');
     }
 
     /**
@@ -118,7 +118,7 @@ class EtalaseController extends Controller
 
         $product->save();
 
-        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah diperbarui');
+        return redirect()->route('etalase.index')->with('success', 'Produk telah diperbarui');
     }
 
     /**
@@ -136,6 +136,6 @@ class EtalaseController extends Controller
         // Hapus data produk dari database
         $product->delete();
 
-        return redirect()->route('admin.etalase.index')->with('success', 'Produk telah dihapus');
+        return redirect()->route('etalase.index')->with('success', 'Produk telah dihapus');
     }
 }
