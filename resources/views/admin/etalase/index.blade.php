@@ -29,7 +29,7 @@
                     @if (!empty($products) && count($products) > 0)
                         @foreach ($products as $product)
                             <tr>
-                                <td><img class="image" src="{{ asset('images/' . $product->image) }}" alt="tes">
+                                <td><img class="image" src="{{ asset('storage/images/'.$product->image) }}" alt="tes">
                                 </td>
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->size }} ml</td>
